@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
     const squares = document.querySelectorAll('#board > div');
     const statusDiv = document.getElementById('status');
-    const newGameBtn = document.querySelector('.btn');');
+    const newGameBtn = document.querySelector('.btn');
     squares.forEach(function(square) {
         square.classList.add('square');
     });
@@ -37,6 +37,7 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
     newGameBtn.addEventListener('click', function() {
+        // Reset game state
         gameState = Array(9).fill(null);
         currentPlayer = 'X';
         squares.forEach(function(square) {
@@ -62,4 +63,3 @@ document.addEventListener('DOMContentLoaded', function() {
         return false;
     }
 });
-
